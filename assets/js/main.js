@@ -42,12 +42,40 @@ function handleSubmit(e) {
 }
 
 /* --------------------------------------------------------------------------
+   Nav — hamburguer (mobile)
+   -------------------------------------------------------------------------- */
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var links  = document.getElementById('nav-links');
+  if (!burger || !links) return;
+
+  burger.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Fecha ao clicar em um link
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+
+/* --------------------------------------------------------------------------
    Nav — compactar ao rolar
    -------------------------------------------------------------------------- */
 window.addEventListener('scroll', function () {
   var nav = document.querySelector('nav');
   if (!nav) return;
-  nav.style.padding = window.scrollY > 50 ? '12px 40px' : '18px 40px';
+  var isMobile = window.innerWidth <= 900;
+  var pad = isMobile ? '12px 24px' : (window.scrollY > 50 ? '12px 40px' : '18px 40px');
+  nav.style.padding = pad;
 });
 
 /* --------------------------------------------------------------------------
