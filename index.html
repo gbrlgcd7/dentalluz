@@ -13,13 +13,16 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Dental<span>Vitta</span></div>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#servicos">Tratamentos</a></li>
     <li><a href="#confianca">A Clínica</a></li>
     <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a href="https://wa.me/5554999100045" class="nav-cta">Agendar Avaliação</a>
+  <button class="nav-burger" id="nav-burger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -226,7 +229,7 @@
     <span class="section-tag">Tecnologia</span>
     <h2 class="section-title">Equipamentos que<br>você vai <em>sentir</em> a diferença.</h2>
     <p class="section-sub" style="margin-bottom:52px">Não é papo de marketing. São aparelhos específicos que tornam os procedimentos mais rápidos, precisos e menos desconfortáveis.</p>
-    <div style="display:grid; grid-template-columns:1.1fr 1fr; gap:16px;">
+    <div class="tech-grid">
 
       <!-- Card grande escuro — Planejamento 3D -->
       <div style="background:var(--dark); border-radius:var(--r-lg); padding:36px; display:flex; flex-direction:column; justify-content:space-between; min-height:280px;">
@@ -262,13 +265,13 @@
       </div>
 
       <!-- Card largo — Câmera Intraoral -->
-      <div style="grid-column:1/-1; background:var(--white); border-radius:var(--r-lg); padding:36px; border:1px solid rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center; gap:40px;">
+      <div class="tech-card-wide" style="grid-column:1/-1; background:var(--white); border-radius:var(--r-lg); padding:36px; border:1px solid rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center; gap:40px;">
         <div style="flex:1;">
           <span style="display:inline-block; font-size:11px; font-weight:500; color:var(--mid); border:1px solid var(--cream); border-radius:100px; padding:4px 12px; margin-bottom:18px;">Transparência total</span>
           <div style="font-family:'Fraunces',serif; font-size:26px; font-weight:400; color:var(--dark); margin-bottom:10px;">Câmera Intraoral</div>
           <div style="font-size:14px; color:var(--mid); line-height:1.7; font-weight:300; max-width:420px;">Você vê em tempo real o que está acontecendo na sua boca. Sem achismos, você vai aprovar cada uma das etapas antes de começar.</div>
         </div>
-        <div style="display:flex; gap:48px; flex-shrink:0; align-items:center;">
+        <div class="tech-card-stats" style="display:flex; gap:48px; flex-shrink:0; align-items:center;">
           <div style="text-align:center;">
             <div style="font-family:'Fraunces',serif; font-size:36px; font-weight:400; color:var(--dark); line-height:1;">0</div>
             <div style="font-size:12px; color:var(--stone); margin-top:4px;">Surpresas</div>
