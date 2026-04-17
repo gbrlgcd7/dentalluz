@@ -38,7 +38,7 @@ function handleSubmit(e) {
   var mensagem  = 'Olá! Meu nome é ' + nome +
                   '. Gostaria de agendar uma avaliação gratuita de ' + tratamento +
                   '. Meu WhatsApp é ' + numero + '.';
-  window.open('https://wa.me/55999999999?text=' + encodeURIComponent(mensagem), '_blank');
+  window.open('https://wa.me/5511998724431?text=' + encodeURIComponent(mensagem), '_blank');
 }
 
 /* --------------------------------------------------------------------------
