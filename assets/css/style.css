@@ -136,7 +136,7 @@ nav {
 
 .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 .hero h1 { font-size: clamp(38px, 5vw, 58px); color: var(--dark); margin-bottom: 20px; letter-spacing: -1px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero h1 em { font-style: italic; color: var(--accent); display: inline-block; white-space: nowrap; }
 .hero-sub { font-size: 17px; color: var(--mid); max-width: 440px; line-height: 1.7; margin-bottom: 36px; font-weight: 300; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
 
@@ -442,7 +442,7 @@ footer {
 @media (max-width: 600px) {
   .hero-card-float { display: none; }
   .hero-card-float2 { display: none; }
-  .hero h1 { font-size: 32px; }
+  .hero h1 { font-size: clamp(20px, 5.8vw, 28px); }
   .hero-actions { flex-direction: column; }
   .btn-primary, .btn-secondary { justify-content: center; }
   .diferenciais-grid { grid-template-columns: 1fr !important; }
